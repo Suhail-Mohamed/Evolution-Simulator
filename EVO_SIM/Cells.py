@@ -100,7 +100,7 @@ class CELLS:
     def eat_prey(self,cell):
         Prob = random.uniform(0,1)
         #there is a 40% chance the cell with actually eat its prey
-        if((self.strength - cell.strength) > 4 and Prob > 0.4):
+        if((self.strength - cell.strength) > 4 and Prob < 0.4):
             self.health+=cell.health
             cell.health = 0
     
